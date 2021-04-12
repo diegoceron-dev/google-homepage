@@ -4,14 +4,49 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
+    <title>Google - Home Page</title>
 </head>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+<script src="https://use.fontawesome.com/794b9eb19f.js"></script>
 <body>
-    <div class="container is-widescreen">
-        <div class="notification is-primary">
-          Hello <strong>World!</strong> <em>Git</em> is <code>useful</code> to development.
+    <nav class="navbar" role="navigation" aria-label="main navigation">     
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-end">
+            <div class="navbar-item">
+                <a class="navbar-item" href="https://mail.google.com/mail/u//#inbox">
+                    Gmail
+                </a>
+                <a class="navbar-item" href="https://www.google.com.mx/imghp?hl=es-419&ogbl">
+                    Imágenes
+                </a>                
+            </div>
+          </div>
         </div>
+      </nav>
+    <div class="container is-widescreen">
+        <div class="columns">
+            <div class="column"></div>
+            <div class="column">
+                <div>
+                    <img src="https://www.google.com/logos/doodles/2021/childrens-day-2021-march-30-6753651837108898-2x.png" alt="Google" width="100%">
+                </div>
+                <div class="field">
+                    <p class="control has-icons-left has-icons-right">
+                    <input class="input is-rounded" type="text" placeholder="">
+                    <span class="icon is-small is-left">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                    </span>
+                    <span class="icon is-small is-right">
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                    </span>
+                    </p>
+                </div>
+                <div>
+                    <button class="button is-light">Buscar con google</button> &nbsp; <button class="button is-light">Me siento con suerte</button>
+                </div>
+            </div>
+            <div class="column"></div>
+          </div>
     </div>
 </body>
 </html>
