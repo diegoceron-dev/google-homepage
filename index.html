@@ -15,10 +15,15 @@
             <div class="navbar-item">
                 <a class="navbar-item" href="https://mail.google.com/mail/u//#inbox">
                     Gmail
+                </a>     
+                <a class="navbar-item" href="https://photos.google.com/login">
+                    Photos
                 </a>
-                <a class="navbar-item" href="https://www.google.com.mx/imghp?hl=es-419&ogbl">
-                    Imágenes
-                </a>                
+                <a href="https://www.theodinproject.com/" target="_blank">
+                    <figure class="image is-32x32">
+                        <img class="is-rounded" src="https://media-exp1.licdn.com/dms/image/C510BAQGmyXnKAFWPDA/company-logo_200_200/0/1519884397447?e=2159024400&v=beta&t=Z8QXHORNbSX-KJY60wRnoggrEVDTNYS7jXkbqOSEpBo">
+                    </figure>
+                </a>
             </div>
           </div>
         </div>
@@ -28,11 +33,11 @@
             <div class="column"></div>
             <div class="column">
                 <div>
-                    <img src="https://www.google.com/logos/doodles/2021/childrens-day-2021-march-30-6753651837108898-2x.png" alt="Google" width="100%">
+                    <img src="https://www.google.com/logos/doodles/2015/evidence-of-water-found-on-mars-5652760466817024.2-hp2x.gif" alt="Google" width="100%">
                 </div>
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                    <input class="input is-rounded" type="text" placeholder="">
+                    <input class="input is-rounded" type="text" placeholder="" id="searchBy">
                     <span class="icon is-small is-left">
                         <i class="fa fa-search" aria-hidden="true"></i>
                     </span>
@@ -42,11 +47,38 @@
                     </p>
                 </div>
                 <div>
-                    <button class="button is-light">Buscar con google</button> &nbsp; <button class="button is-light">Me siento con suerte</button>
+                    <button class="button is-light" onclick="search()">Buscar con google</button> &nbsp; 
+                    <button class="button is-light" onclick="searchLucky()">Me siento con suerte</button>
                 </div>
             </div>
             <div class="column"></div>
           </div>
     </div>
 </body>
+<script>
+    function search() {
+        var urlSearch = 'https://www.google.com/search?q=';
+        var searchBy = document.getElementById("searchBy").value;
+        var newSearch = urlSearch + searchBy;
+
+        if(searchBy != ''){
+            window.open(newSearch);
+        }else{
+            return
+        }
+    }
+
+    function searchLucky(params) {
+        var urlSearch = 'https://github.com/diegodevelop/info';
+        window.open(urlSearch);
+    }
+
+    var input = document.getElementById("searchBy");
+        input.addEventListener("keyup", function(event) {
+        if (event.keyCode === 13) {
+            event.preventDefault();
+            search();
+        }
+    });
+</script>
 </html>
