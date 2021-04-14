@@ -57,9 +57,9 @@
 </body>
 <script>
     function search() {
-        var urlSearch = 'https://www.google.com/search?q=';
-        var searchBy = document.getElementById("searchBy").value;
-        var newSearch = urlSearch + searchBy;
+        const urlSearch = 'https://www.google.com/search?q=';
+        let searchBy = document.getElementById("searchBy").value;
+        let newSearch = urlSearch + searchBy;
 
         if(searchBy != ''){
             window.open(newSearch);
@@ -69,7 +69,7 @@
     }
 
     function searchLucky(params) {
-        var urlSearch = 'https://github.com/diegodevelop/info';
+        const urlSearch = 'https://github.com/diegodevelop/info';
         window.open(urlSearch);
     }
 
